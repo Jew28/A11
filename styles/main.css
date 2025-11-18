@@ -141,7 +141,7 @@ footer {
   width: 40%;
   display: none; 
 }
-}
+
 
 .navbar {
   position: relative;
@@ -186,31 +186,19 @@ footer {
   main {
     flex-direction: row;
   }
-
-  /* Horizontal navigation */
-  .menu {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
+.menu li:first-child a {
+    border-left: none;
   }
 
-  .menu-btn {
-    display: none; /* hide hamburger */
+  .menu li:last-child a {
+    border-right: none;
   }
+}
 
-  /* Submenu adjustments */
-  .submenu {
-    top: auto;
-    left: 0;
-    right: 0;
-  }
-  .submenu li::after {
-    content: "▼"; /* down-pointing triangle for dropdown */
-  }
+.navbar a {
+  margin: 0 2px 2px 0;
+}
 
-  /* Navbar margins */
-  .navbar a {
-    margin: 0;
-  }
+.submenu li a {
+  margin: 2px;
 }
