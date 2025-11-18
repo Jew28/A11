@@ -92,19 +92,15 @@ main {
 }
 
 /* the styles for the section */
-section {
-	flex-basis: 75%;
-	padding-left: .5em;
-	& img {
-		width: clamp(100px, 50%, 250px);
-		float: right;
-		margin: 0 1em .25em;
-	}
-}
+ section {
+    flex-basis: 70%;
+    border-bottom: none; /* remove divider */
+  }
 
 /* the styles for the aside */
 aside {
-}
+    flex-basis: 30%;
+  }
 
 /* the styles for the footer */
 footer {
@@ -183,5 +179,38 @@ footer {
   width: 100%;
 }
 .submenu li::after {
-  content: "▶"; 
+  content: "⏯️"; 
+}
+@media (min-width: 768px) {
+  /* Two-column layout */
+  main {
+    flex-direction: row;
+  }
+
+  /* Horizontal navigation */
+  .menu {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .menu-btn {
+    display: none; /* hide hamburger */
+  }
+
+  /* Submenu adjustments */
+  .submenu {
+    top: auto;
+    left: 0;
+    right: 0;
+  }
+  .submenu li::after {
+    content: "▼"; /* down-pointing triangle for dropdown */
+  }
+
+  /* Navbar margins */
+  .navbar a {
+    margin: 0;
+  }
 }
