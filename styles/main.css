@@ -93,9 +93,9 @@ main {
 
 /* the styles for the section */
  section {
-    flex-basis: 70%;
-    border-bottom: none; /* remove divider */
-  }
+  border-bottom: 1px solid #ccc;FF
+ }
+
 
 /* the styles for the aside */
 aside {
